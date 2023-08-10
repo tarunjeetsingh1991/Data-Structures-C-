@@ -152,5 +152,5 @@ int main()
 	getline(cin, text);
 	buildHuffmanTree(text);
 
-	/*BCCABBDDAECCBBAEDDCC*/
+	/* Data se : BCCABBDDAECCBBAEDDCC*/
 }
