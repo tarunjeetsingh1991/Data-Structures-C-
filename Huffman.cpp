@@ -139,7 +139,7 @@ void buildHuffmanTree(string text)
 		decode(root, index, str);
 	}
 	cout << endl;
-	float ans = count2 - (count + count1);
+	float ans = count2 - (count + cnt + count1);
 	cout << "The data is compressed by : " << ans << " Bits" << endl;
 	float ratio = float((ans / count2) * 100);
 	cout << "The compression ratio is : " << ratio << "%" << endl;
