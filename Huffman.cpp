@@ -31,8 +31,7 @@ struct comp
 	}
 };
 
-void encode(Node* root, string str,
-	unordered_map<char, string>& huffmanCode)
+void encode(Node* root, string str, unordered_map<char, string>& huffmanCode)
 {
 	if (root == nullptr)
 		return;
@@ -105,6 +104,7 @@ void buildHuffmanTree(string text)
 
 	cout << "Huffman Codes are :\n" << '\n';
 	int count = 0;
+	int cnt = 0;
 	for (auto pair : huffmanCode)
 	{
 		cout << pair.first << " " << pair.second << '\n';
@@ -112,8 +112,9 @@ void buildHuffmanTree(string text)
 		{
 			count++;
 		}
+		cnt += 8;
 	}
-	cout << "Count of Huffman Codes is : " << count << endl;
+	cout << "Count of Huffman Codes is : " << count + cnt << endl;
 
 	cout << "\nOriginal string was :\n" << text << '\n';
 
@@ -150,4 +151,6 @@ int main()
 	cout << "Enter a string : " << endl;
 	getline(cin, text);
 	buildHuffmanTree(text);
+
+	/*BCCABBDDAECCBBAEDDCC*/
 }
